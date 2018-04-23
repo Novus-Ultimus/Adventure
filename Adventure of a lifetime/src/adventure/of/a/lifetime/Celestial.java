@@ -8,7 +8,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -24,6 +27,8 @@ import javax.swing.Timer;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import static javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
 
 public class Celestial {
     
@@ -117,6 +122,45 @@ public class Celestial {
 
 		frame.dispose();
 	}
+    
+        public void Yoko() throws InterruptedException {
+
+		JFrame frame = new JFrame("Yoko Taro");
+		
+		frame.setBounds(0, 0, 600, 338);
+		frame.setLayout(null);
+		
+		ImageIcon img = new ImageIcon("Images\\Yoko Taro.jpg");
+		frame.setIconImage(img.getImage());
+		
+		try {
+			frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("Images\\Yoko Taro.jpg")))));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+                frame.getContentPane().setBackground(Color.pink);//Sets backround color(Does ablsolutly nothing)
+
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		frame.setVisible(true);
+
+		TimeUnit.SECONDS.sleep(4);
+
+		frame.dispose();
+	}
+    
+            public void Perfect() throws FileNotFoundException, IOException {
+            
+    // open the sound file as a Java input stream
+    String PerfectFile = "Sounds\\Street Fighter II-You Win Perfect.wav";
+    InputStream in = new FileInputStream(PerfectFile);
+
+    // create an audiostream from the inputstream
+    AudioStream audioStream = new AudioStream(in);
+
+    // play the audio clip with the audioplayer class
+    AudioPlayer.player.start(audioStream);
+  }
 
     public void tenor() throws InterruptedException {
 //

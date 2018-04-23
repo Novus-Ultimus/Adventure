@@ -181,17 +181,34 @@ public class HardCode {
         }
     }
 
-    private void SouthWest1() {
+    private void SouthWest1() throws InterruptedException {
         // TODO Auto-generated method stub
 
-        System.out.print("This path is currently not available");
+        System.out.print("This path is currently not available\n");
+        TimeUnit.SECONDS.sleep(1);
+        System.out.print("Please Write in Back\n\n");
+        
+        while (!"back".equals(user)){
+           String user = input.nextLine().trim().toLowerCase(); 
+           if("back".equals(user)){
+               this.Start();
+           }
+        }
     }
 
-    private void SouthEast1() {
-        // TODO Auto-generated method stub
+    private void SouthEast1() throws InterruptedException {
+            // TODO Auto-generated method stub
 
-        System.out.print("This path is currently not available");
-    }
+        System.out.print("This path is currently not available\n");
+        TimeUnit.SECONDS.sleep(1);
+        System.out.print("Please Write in Back\n\n");
+        
+        while (!"back".equals(user)){
+           String user = input.nextLine().trim().toLowerCase(); 
+           if("back".equals(user)){
+               this.Start();
+           }
+        }}
 
     private void North1() {
         // TODO Auto-generated method stub
@@ -333,11 +350,19 @@ public class HardCode {
         }
     }
 
-    private void NorthWest1() {
-        // TODO Auto-generated method stub
+    private void NorthWest1() throws InterruptedException {
+            // TODO Auto-generated method stub
 
-        System.out.print("This path is currently not available");
-    }
+        System.out.print("This path is currently not available\n");
+        TimeUnit.SECONDS.sleep(1);
+        System.out.print("Please Write in Back\n\n");
+        
+        while (!"back".equals(user)){
+           String user = input.nextLine().trim().toLowerCase(); 
+           if("back".equals(user)){
+               this.Start();
+           }
+        }}
 
     private void East1() throws InterruptedException {
         System.out.print("You stand before a small waterfall flowing into a lake\n");
@@ -409,17 +434,33 @@ public class HardCode {
         }
     }
 
-    private void NorthEast1() {
-        // TODO Auto-generated method stub
+    private void NorthEast1() throws InterruptedException {
+            // TODO Auto-generated method stub
 
-        System.out.print("This path is currently not available");
-    }
+        System.out.print("This path is currently not available\n");
+        TimeUnit.SECONDS.sleep(1);
+        System.out.print("Please Write in Back\n\n");
+        
+        while (!"back".equals(user)){
+           String user = input.nextLine().trim().toLowerCase(); 
+           if("back".equals(user)){
+               this.Start();
+           }
+        }}
 
-    public void Slender() {
-        // TODO Auto-generated method stub
-        System.out.print("This path is currently not available");
+    public void Slender() throws InterruptedException {
+            // TODO Auto-generated method stub
 
-    }
+        System.out.print("This path is currently not available\n");
+        TimeUnit.SECONDS.sleep(1);
+        System.out.print("Please Write in Back\n\n");
+        
+        while (!"back".equals(user)){
+           String user = input.nextLine().trim().toLowerCase(); 
+           if("back".equals(user)){
+               this.Start();
+           }
+        }}
 
     public void Waterfall() throws InterruptedException {
         System.out.print("Before you can get to the pearl a hungry piranha approches you \n");
@@ -635,10 +676,19 @@ public class HardCode {
 
     }
 
-    private void leatherhouseleft() {
-		// TODO Auto-generated method stub
+    private void leatherhouseleft() throws InterruptedException {
+        // TODO Auto-generated method stub
 
-        System.out.print("This path is currently not available");
+        System.out.print("This path is currently not available\n");
+        TimeUnit.SECONDS.sleep(1);
+        System.out.print("Please Write in Back\n\n");
+        
+        while (!"back".equals(user)){
+           String user = input.nextLine().trim().toLowerCase(); 
+           if("back".equals(user)){
+               this.Start();
+           }
+        }
     }
 
     public void leatherhouseup() throws InterruptedException {
@@ -699,16 +749,19 @@ public class HardCode {
                                     + " to talk to the fireplace, begin to ready what's left of your pitchfork in the"
                                     + "\nmiddle of his temple. He goes down and you feel triumphant. You take his 38."
                                     + " and the 4 bullets that were in it.\n\n");
+                            TimeUnit.SECONDS.sleep(3);
                             bullets = 4;
                             System.out.print("Everything around you is now on fire, the walls, the floor, the ceiling"
                                     + "... ok that isn't true, not everything is on fire, the one window and fireplace"
                                     + "aren't on fire\n");
+                            TimeUnit.SECONDS.sleep(3);
                             System.out.print("Leatherface is accending the stairs and smoke is rising so you do the "
                                     + "only sensible thing and jump out\nof the only window not on fire. You break "
                                     + "one of your legs and are currently being chased by a group of Villagers,\n"
                                     + "1 leatherface revving a chainsaw pissed that you killed his grampa, and "
                                     + "everything is on fire.\n You fire a round into the air to scare away the"
                                     + " Villagers and continue to drag yourself in the opposite direction of the house\n");
+                            TimeUnit.SECONDS.sleep(3);
                             bullets --;
                             JasonLake();
                         }else if("kick".equals(action)){
@@ -739,8 +792,25 @@ public class HardCode {
         }
     }
     
-    private void JasonLake() {
+    public void JasonLake() throws InterruptedException {
                 // TODO Auto-generated method stub
+        
+        //Temp//
+        System.out.print("This is the current end of the game, happy times, you have finally"
+                + "(temperarlly) finished this game, congrats.\n For you on this happy occasion"
+                + " i give you this\n");
+        ct.Yoko();
+        System.out.print("And this:");
+        try {
+            ct.Perfect();
+        } catch (IOException ex) {
+            Logger.getLogger(HardCode.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.print("like the sound effect, well that's it");
+        TimeUnit.SECONDS.sleep(2);
+        exit(1);
+        //Temp//
+        
     System.out.print("");
     System.out.print("");
     

@@ -31,10 +31,12 @@ public class Start {
         
 //        ex.villager();
         
-        hc.leatherhouseup();
+//        hc.leatherhouseup();
+        
+//        hc.JasonLake();
         
         
-        exit(0);
+//        exit(0);
         
         System.out.print("Available commands are Move(Cardinal Directions),\n"
                 + "Examine, Hit(Punch or Kick), Pick Up, and Dance \n\n\n\n\n");
